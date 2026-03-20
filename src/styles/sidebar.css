@@ -1,0 +1,141 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -270px;
+  width: 260px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.12);
+  transition: left 0.3s ease-in-out;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  padding: 14px 16px;
+  background-color: #1f7a4c;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 56px;
+}
+
+.sidebar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: "Courier New", monospace;
+}
+
+.sidebar-header .close-btn {
+  color: white;
+  font-size: 18px;
+}
+
+/* Sidebar Profile */
+.sidebar-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #f9fafb;
+}
+
+.sidebar-avatar {
+  font-size: 56px;
+  color: #1f7a4c;
+  margin-bottom: 10px;
+}
+
+.sidebar-user-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-user-role {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* Sidebar Nav */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+  flex: 1;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 13px 22px;
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  border-left: 3px solid transparent;
+}
+
+.nav-item:hover {
+  background-color: #f0fdf4;
+  color: #1f7a4c;
+  border-left-color: #1f7a4c;
+}
+
+.nav-item.active {
+  background-color: #e8f5ee;
+  color: #1f7a4c;
+  font-weight: 600;
+  border-left-color: #1f7a4c;
+}
+
+.nav-item.logout {
+  color: #c0392b;
+  margin-top: auto;
+  border-top: 1px solid #f0f0f0;
+}
+
+.nav-item.logout:hover {
+  background-color: #fff0f0;
+  color: #a93226;
+  border-left-color: #c0392b;
+}
+
+/* Dark theme */
+body.dark-theme .sidebar {
+  background-color: #1e1e2f;
+}
+
+body.dark-theme .sidebar-profile {
+  background-color: #252535;
+  border-bottom-color: #3a3a50;
+}
+
+body.dark-theme .sidebar-user-name {
+  color: #e0e0e0;
+}
+
+body.dark-theme .nav-item {
+  color: #c0c0d0;
+}
+
+body.dark-theme .nav-item:hover,
+body.dark-theme .nav-item.active {
+  background-color: #2a3a30;
+  color: #4caf80;
+  border-left-color: #4caf80;
+}

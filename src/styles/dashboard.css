@@ -1,0 +1,132 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Base Card */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Card with dark header (Account Status, Requirements Status) */
+.card-dark-header .card-header {
+  background-color: #5a6e65;
+  color: white;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.card-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-header-icon {
+  font-size: 16px;
+}
+
+.card-header-sub {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+/* Card Body */
+.card-body {
+  padding: 18px 16px;
+}
+
+/* Grades Card */
+.card-notice {
+  padding: 14px 16px 10px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.55;
+}
+
+.subject-list {
+  list-style: none;
+  padding: 4px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subject-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.45;
+}
+
+.subject-icon {
+  color: #e74c3c;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Account Status */
+.balance-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.balance-amount {
+  color: #c0392b;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.card-note {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Requirements Status */
+.excluded-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+/* Dark theme */
+body.dark-theme .card {
+  background-color: #252535;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .card-notice,
+body.dark-theme .subject-item {
+  color: #c0c0d8;
+}
+
+body.dark-theme .balance-label,
+body.dark-theme .excluded-title {
+  color: #e0e0e0;
+}
+
+body.dark-theme .card-note {
+  color: #9090a8;
+}
+
+body.dark-theme .card-dark-header .card-header {
+  background-color: #3a4a42;
+}
