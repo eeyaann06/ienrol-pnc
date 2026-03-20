@@ -13,11 +13,8 @@ function App() {
 
   return (
     <div className="app-container">
-      <SideBar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-      {isSidebarOpen && (
-        <div className="overlay" onClick={() => setIsSidebarOpen(false)} />
-      )}
-      <div className="main-content">
+      <SideBar isOpen={isSidebarOpen} />
+      <div className={`main-content ${isSidebarOpen ? "shifted" : ""}`}>
         <Header onToggleMenu={toggleSidebar} />
         <main className="page-body">
           <Dashboard />

@@ -1,13 +1,13 @@
 .sidebar {
   position: fixed;
   top: 0;
-  left: -270px;
+  left: -260px;
   width: 260px;
   height: 100%;
   background-color: #ffffff;
-  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
   transition: left 0.3s ease-in-out;
-  z-index: 1001;
+  z-index: 998;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -17,51 +17,27 @@
   left: 0;
 }
 
-/* Sidebar Header */
-.sidebar-header {
-  padding: 14px 16px;
-  background-color: #1f7a4c;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 56px;
-}
-
-.sidebar-logo {
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  font-family: "Courier New", monospace;
-}
-
-.sidebar-header .close-btn {
-  color: white;
-  font-size: 18px;
-}
-
-/* Sidebar Profile */
 .sidebar-profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px 16px 16px;
-  border-bottom: 1px solid #f0f0f0;
-  background-color: #f9fafb;
+  padding: 36px 16px 24px;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: #ffffff;
 }
 
 .sidebar-avatar {
-  font-size: 56px;
+  font-size: 64px;
   color: #1f7a4c;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .sidebar-user-name {
   font-size: 13px;
   font-weight: 600;
-  color: #222;
+  color: #1a1a1a;
   text-align: center;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 
 .sidebar-user-role {
@@ -70,11 +46,10 @@
   margin-top: 4px;
 }
 
-/* Sidebar Nav */
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  padding: 12px 0;
+  padding: 10px 0;
   flex: 1;
 }
 
@@ -105,8 +80,8 @@
 
 .nav-item.logout {
   color: #c0392b;
-  margin-top: auto;
   border-top: 1px solid #f0f0f0;
+  margin-top: auto;
 }
 
 .nav-item.logout:hover {
@@ -115,18 +90,12 @@
   border-left-color: #c0392b;
 }
 
-/* Dark theme */
 body.dark-theme .sidebar {
   background-color: #1e1e2f;
 }
 
 body.dark-theme .sidebar-profile {
-  background-color: #252535;
-  border-bottom-color: #3a3a50;
-}
-
-body.dark-theme .sidebar-user-name {
-  color: #e0e0e0;
+  background-color: #145c38;
 }
 
 body.dark-theme .nav-item {
