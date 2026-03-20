@@ -107,6 +107,198 @@
   margin-bottom: 8px;
 }
 
+/* ── Account Status Card ─────────────────────────── */
+.acct-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 0.5px solid #e2e8e4;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.acct-header {
+  background-color: #5a6e65;
+  padding: 13px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.acct-header-left {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.acct-header-icon {
+  font-size: 15px;
+  color: #fff;
+}
+
+.acct-header-sub {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.acct-body {
+  padding: 18px;
+}
+
+.acct-student-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid #eef0ed;
+  margin-bottom: 16px;
+}
+
+.acct-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e8f5ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #5a6e65;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+.acct-student-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 3px;
+}
+
+.acct-student-id {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.acct-balance-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 14px;
+}
+
+.acct-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.acct-row-label {
+  font-size: 13px;
+  color: #666;
+}
+
+.acct-row-amount {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.acct-row-paid {
+  background-color: #f0fdf4;
+}
+
+.acct-row-paid .acct-row-label {
+  color: #0f6e56;
+}
+
+.acct-row-paid .acct-row-amount {
+  color: #0f6e56;
+}
+
+.acct-divider {
+  height: 0.5px;
+  background: #eef0ed;
+  margin: 3px 0;
+}
+
+.acct-notice {
+  padding: 10px 14px;
+  background: #fffbeb;
+  border-left: 3px solid #d97706;
+  border-radius: 0;
+}
+
+.acct-notice p {
+  font-size: 12px;
+  color: #92400e;
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Dark theme */
+body.dark-theme .acct-card {
+  background: #252535;
+  border-color: #3a3a50;
+}
+
+body.dark-theme .acct-header {
+  background-color: #1a1a1a;
+}
+
+body.dark-theme .acct-student-row {
+  border-bottom-color: #3a3a50;
+}
+
+body.dark-theme .acct-avatar {
+  background: #1e3a2a;
+  color: #4caf80;
+}
+
+body.dark-theme .acct-student-name {
+  color: #e0e0e0;
+}
+
+body.dark-theme .acct-student-id {
+  color: #7070a0;
+}
+
+body.dark-theme .acct-row-label {
+  color: #9090a8;
+}
+
+body.dark-theme .acct-row-amount {
+  color: #d0d0e8;
+}
+
+body.dark-theme .acct-row-paid {
+  background-color: #1a2e22;
+}
+
+body.dark-theme .acct-row-paid .acct-row-label,
+body.dark-theme .acct-row-paid .acct-row-amount {
+  color: #4caf80;
+}
+
+body.dark-theme .acct-divider {
+  background: #3a3a50;
+}
+
+body.dark-theme .acct-notice {
+  background: #2a2010;
+  border-left-color: #d97706;
+}
+
+body.dark-theme .acct-notice p {
+  color: #fbbf24;
+}
+
 /* Dark theme */
 body.dark-theme .card {
   background-color: #252535;
@@ -129,4 +321,172 @@ body.dark-theme .card-note {
 
 body.dark-theme .card-dark-header .card-header {
   background-color: #3a4a42;
+}
+
+body.dark-theme .account-student-info {
+  border-bottom-color: #3a3a50;
+}
+
+body.dark-theme .account-student-name {
+  color: #e0e0e0;
+}
+
+body.dark-theme .account-student-id {
+  background: #3a3a50;
+  color: #9090a8;
+}
+
+body.dark-theme .balance-row-label {
+  color: #9090a8;
+}
+
+body.dark-theme .total-amount {
+  color: #c0c0d8;
+}
+
+body.dark-theme .remaining-label {
+  color: #c0c0d8;
+}
+
+body.dark-theme .balance-divider {
+  border-top-color: #3a3a50;
+}
+
+body.dark-theme .payment-progress-bar {
+  background-color: #3a3a50;
+}
+
+/* ── Remaining Balance Block ─────────────────────── */
+.acct-remaining-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff5f5;
+  border: 0.5px solid #fcc;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.acct-remaining-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #a32d2d;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+}
+
+.acct-remaining-amount {
+  font-size: 28px;
+  font-weight: 700;
+  color: #c0392b;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.acct-remaining-note {
+  font-size: 11px;
+  color: #a32d2d;
+  opacity: 0.8;
+}
+
+/* ── Computation Breakdown ───────────────────────── */
+.acct-breakdown {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 12px 14px;
+  border: 0.5px solid #eef0ed;
+}
+
+.acct-breakdown-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 10px;
+}
+
+.acct-breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.acct-breakdown-label {
+  font-size: 13px;
+  color: #555;
+}
+
+.acct-breakdown-label-bold {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+}
+
+.acct-breakdown-amount {
+  font-size: 13px;
+  font-weight: 500;
+  color: #222;
+}
+
+.acct-paid {
+  color: #0f6e56;
+}
+
+.acct-due {
+  color: #c0392b;
+  font-weight: 700;
+}
+
+.acct-breakdown-divider {
+  height: 0.5px;
+  background: #dde0db;
+  margin: 6px 0;
+}
+
+/* Dark theme — remaining & breakdown */
+body.dark-theme .acct-remaining-block {
+  background: #2d1a1a;
+  border-color: #5a2a2a;
+}
+
+body.dark-theme .acct-remaining-label {
+  color: #f09595;
+}
+
+body.dark-theme .acct-remaining-amount {
+  color: #f09595;
+}
+
+body.dark-theme .acct-remaining-note {
+  color: #f09595;
+}
+
+body.dark-theme .acct-breakdown {
+  background: #1e1e2f;
+  border-color: #3a3a50;
+}
+
+body.dark-theme .acct-breakdown-title {
+  color: #7070a0;
+}
+
+body.dark-theme .acct-breakdown-label {
+  color: #9090a8;
+}
+
+body.dark-theme .acct-breakdown-label-bold {
+  color: #d0d0e8;
+}
+
+body.dark-theme .acct-breakdown-amount {
+  color: #d0d0e8;
+}
+
+body.dark-theme .acct-breakdown-divider {
+  background: #3a3a50;
 }
